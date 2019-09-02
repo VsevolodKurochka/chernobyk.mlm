@@ -1,0 +1,24 @@
+.possibility
+  &__content
+    +d(flex)
+    +jc(center)
+    +ai(center)
+    +bgi('../img/possibility-image.png')
+    +py(45px)
+    +min(sm)
+      +py(90px)
+    +min(md)
+      +py(125px, 140px)
+    &-inner
+      +c($color-white)
+      +min(sm)
+        +w(80%)
+        +fs(16px)
+      +min(md)
+        +w(60%)
+        +fs(18px)
+      +min(lg)
+        +w(50%)
+      p
+        &:not(:last-child)
+          +mb(15px)
