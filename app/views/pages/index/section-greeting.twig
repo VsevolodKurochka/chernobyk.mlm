@@ -11,18 +11,20 @@
         <div class="row greeting__row">
             <div class="greeting__info">
                 {{ landing.image('img/greeting-info-man.png', 'greeting info man', 'greeting__info-man') }}
-                <p class="greeting__info-description">
-                    Спикер мероприятия — <br>
-                    легенда сетевого<br>
-                    бизнеса <strong class="color-brand-2">Том<br>Шрайтер</strong><br>
-                    (Большой Эл)
-                </p>
-                {{
+                <div class="greeting__info-content">
+                    <p class="greeting__info-description">
+                        Спикер мероприятия — <br>
+                        легенда сетевого<br>
+                        бизнеса <strong class="color-brand-2">Том<br> Шрайтер</strong><br>
+                        (Большой Эл)
+                    </p>
+                    {{
                     landing.button('greeting__info-button btn_lg', 'Узнать наличие мест', {
                         'data-action': 'modal',
                         'data-open': '#modal-form'
                     })
-                }}
+                    }}
+                </div>
             </div>
         </div>
         <div class="greeting__date">

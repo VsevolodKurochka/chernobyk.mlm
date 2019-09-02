@@ -4,7 +4,6 @@
 	+max(md)
 		+d('flex')
 		align-items: center
-		justify-content: space-between
 
 	+min(md)
 		+mb(-45px)
@@ -16,10 +15,13 @@
 		display: inline-flex
 		align-items: center
 		justify-content: center
-		+size(75px)
+		+size(45px)
 		+bgc($color-white)
 		border-radius: 100%
 		text-align: center
+
+		+max(md)
+			+mb(-25px)
 
 		+min(md)
 			+size(80px)
@@ -27,5 +29,6 @@
 	&-img
 		vertical-align: middle
 		object-fit: contain
+		+size(30px)
 		+min(md)
 			+size(60px)

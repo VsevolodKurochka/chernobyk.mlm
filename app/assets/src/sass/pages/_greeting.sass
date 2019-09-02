@@ -1,4 +1,5 @@
 .greeting
+  +my(90px)
   +min(md)
     +my(110px)
   &__container
@@ -11,10 +12,14 @@
     opacity: 0.5
     +ff('bl')
     +mb(15px)
+    +fs(3.5vw)
     +min(md)
       +fs(40px)
     +min(lg)
       +fs(50px)
+
+  &__image
+    +mb(30px)
 
   &__man
     +a(10%, null, null, 50%)
@@ -23,6 +28,7 @@
 
   &__row
     +mb(45px)
+    +jc(center)
     +min(sm)
       +jc(flex-end)
 
@@ -30,17 +36,36 @@
       +mt(-240px)
 
   &__info
-    +d(flex)
     +r()
+    +d(flex)
     flex-wrap: wrap
     +ai(center)
     &-button
-      +a(null, null, null, -56%)
+      +max(sm)
+        padding: 10px 20px
+        +fs(12px)
+      +min(sm)
+        +a(null, null, null, -56%)
     &-man
+      max-width: 100px
+      +max(sm)
+        +mr(15px)
       +min(md)
         max-width: 230px
+    &-description
+      +max(sm)
+        +fs(12px)
+        +mb(10px)
+        br
+          +d(none)
+    &-content
+      +max(sm)
+        flex-basis: 55%
 
   &__date
+    +max(sm)
+      &-info
+        +mb(15px)
     +min(sm)
       +d(flex)
       flex-wrap: wrap
