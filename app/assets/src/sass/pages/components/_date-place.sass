@@ -1,0 +1,29 @@
+.date-place
+  +r()
+  +c($color-brand-2)
+  +ff('bl')
+  +tt(uppercase)
+  +min(sm)
+    &_right
+      +ta(right)
+  +min(md)
+    +fs(30px)
+  +min(lg)
+    +fs(32px)
+
+  &:before
+    content: ''
+    +a(0, null, null, 0)
+    +bgi('../img/greeting-info-date.png')
+    +min(sm)
+      top: 50%
+      transform: translateY(-50%)
+      +size(35px, 49px)
+    +min(md)
+      +size(45px, 63px)
+  &_right
+    +min(sm)
+      text-align: right
+      &:before
+        right: -20%
+        left: auto

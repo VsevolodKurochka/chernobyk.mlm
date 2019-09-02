@@ -1,3 +1,9 @@
 =ff($type)
-	@if $type = 'r'
-		font-family: 'Roboto', sans-serif
+	@if $type == 'l'
+		font-family: 'ProximaLight', sans-serif
+	@else if $type == 'r'
+		font-family: 'ProximaRegular', sans-serif
+	@else if $type == 'b'
+		font-family: 'ProximaBold', sans-serif
+	@else if $type == 'bl'
+		font-family: 'ProximaBlack', sans-serif

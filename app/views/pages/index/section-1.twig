@@ -1,1 +1,34 @@
 {% import 'macros/landing.twig' as landing %}
+<section class="section greeting">
+    <div class="container greeting__container">
+        {{ landing.image('img/greeting-man.png', 'greeting man', 'greeting__man') }}
+        <div class="greeting__titles">
+            <span>Мастерство</span>
+            <span>лидерство</span>
+            <span>менеджмент</span>
+        </div>
+        {{ landing.image('img/greeting.png', 'greeting', 'greeting__image') }}
+        <div class="row greeting__row">
+            <div class="greeting__info">
+                {{ landing.image('img/greeting-info-man.png', 'greeting info man', 'greeting__info-man') }}
+                <p class="greeting__info-description">
+                    Спикер мероприятия — <br>
+                    легенда сетевого<br>
+                    бизнеса <strong class="color-brand-2">Том<br>Шрайтер</strong><br>
+                    (Большой Эл)
+                </p>
+                {{
+                    landing.button('greeting__info-button btn_lg', 'Узнать наличие мест', {
+                        'data-action': 'modal',
+                        'data-open': '#modal-form'
+                    })
+                }}
+            </div>
+        </div>
+        <div class="greeting__date">
+            <p class="greeting__date-info date-place date-place_right">26 октября <span class="color-brand-1">Киев</span><br>КВЦ Парковый</p>
+            <p class="greeting__date-description">Бизнес-событие, объединяющее инсайдеров и лидеров<br>
+                МЛМ индустрии. Проверенные стратегии продаж, управления командами и привлечения клиентов от лидеров отрасли</p>
+        </div>
+    </div>
+</section>

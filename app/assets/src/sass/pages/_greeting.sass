@@ -1,0 +1,52 @@
+.greeting
+  +min(md)
+    +my(110px)
+  &__container
+    +r()
+  &__titles
+    display: flex
+    justify-content: space-between
+    text-transform: uppercase
+    +c($color-brand-1)
+    opacity: 0.5
+    +ff('bl')
+    +mb(15px)
+    +min(md)
+      +fs(40px)
+    +min(lg)
+      +fs(50px)
+
+  &__man
+    +a(10%, null, null, 50%)
+    transform: translateX(-50%)
+    z-index: -1
+
+  &__row
+    +mb(45px)
+    +min(sm)
+      +jc(flex-end)
+
+    +min(lg)
+      +mt(-240px)
+
+  &__info
+    +d(flex)
+    +r()
+    flex-wrap: wrap
+    +ai(center)
+    &-button
+      +a(null, null, null, -56%)
+    &-man
+      +min(md)
+        max-width: 230px
+
+  &__date
+    +min(sm)
+      +d(flex)
+      flex-wrap: wrap
+      +ai(center)
+      +jc(space-around)
+
+    &-description
+      +min(sm)
+        flex-basis: 60%
