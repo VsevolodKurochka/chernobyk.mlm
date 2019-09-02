@@ -1,0 +1,44 @@
+{% import 'macros/landing.twig' as landing %}
+{%
+    set items = [
+        {
+            icon: 'img/practice-1.png',
+            title: '<strong>Пошаговые инструкции</strong><br>в построении команд<br>МЛМ бизнеса',
+            type: 'default'
+        },
+        {
+            icon: 'img/practice-2.png',
+            title: '<strong>Рекомендации</strong> по<br>продвижению бизнеса<br> и команды в online',
+            type: 'highlight'
+        },
+        {
+            icon: 'img/practice-3.png',
+            title: '<strong>Инсайты</strong> для преодоления<br> сложных, переломных<br> этапов в бизнесе',
+            type: 'default'
+        }
+    ]
+%}
+<section class="section practice">
+    <div class="container">
+        <div class="section__header">
+            <div class="section__header-circle"></div>
+            <p class="section__subtitle"><span class="color-brand-2">Практическое обучение</span> от коучей МЛМ<br>
+                Мирового масштаба, а также от <span class="color-brand-2">Лидеров мнений</span> — <br>
+                лучших предпринимателей из различных отраслей</p>
+        </div>
+        <div class="row">
+            {% set i = 0 %}
+            {% for item in items %}
+                {% set i = i + 1 %}
+                <div class="col-12 col-sm-4 practice-item__column">
+                    <div class="practice-item practice-item_{{ i }} practice-item_{{ item.type }}">
+                        <div class="practice-item__inner">
+                            {{ landing.image(item.icon, 'practice item', 'practice-item__image') }}
+                            <p class="practice-item__title">{{ item.title|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

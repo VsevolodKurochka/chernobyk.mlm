@@ -1,0 +1,53 @@
+.practice
+  &-item
+    +r()
+    +d(flex)
+    +ai(center)
+    +jc(center)
+    +ta(center)
+    +c($color-white)
+    +py(45px)
+    border-radius: 5px
+    box-shadow: 0 7px 25px 0px $color-brand-1
+    +min(sm)
+      +py(60px)
+    +min(md)
+      +py(120px)
+    &:before
+      content: ''
+      +a(0, null, null, 0)
+      +size(100%)
+      +bgc(transparentize($color-brand-1, 0.2))
+      border-radius: 5px
+    &_highlight
+      box-shadow: 0 7px 25px 0px $color-brand-2
+      &:before
+        +bgc(transparentize($color-brand-2, 0.2))
+    &_1
+      +bgi('../img/practice-bg.jpg', 25% 45%, no-repeat, 500%)
+    &_2
+      +bgi('../img/practice-bg.jpg', 50% 45%, no-repeat, 500%)
+      +min(sm)
+        +mt(90px)
+    &_3
+      +bgi('../img/practice-bg.jpg', 75% 45%, no-repeat, 500%)
+      +min(sm)
+        +mt(45px)
+    &__inner
+      +r()
+      z-index: 1
+    &__image
+      +mb(30px)
+      +min(sm)
+        +mb(45px)
+      +max(md)
+        max-width: 45px
+      +min(md)
+        +mb(90px)
+    &__column
+      +max(sm)
+        &:not(:last-child)
+          +mb(30px)
+    &__title
+      +max(md)
+        +fs(14px)
