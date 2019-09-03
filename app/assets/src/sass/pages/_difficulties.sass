@@ -1,0 +1,76 @@
+.difficulties
+  +r()
+  +min(sm)
+    +py(100px)
+  +min(md)
+    +py(190px, 140px)
+  &__bg
+    content: ''
+    +a(0, null, null, 0)
+    +size(100%)
+    object-fit: cover
+  &__header
+    +min(sm)
+      +d(none)
+
+  &-item
+    +mb(15px)
+    +min(sm)
+      +mb(60px)
+    &__title
+      +fs(12px)
+      +min(md)
+        +fs(14px)
+    &__inner
+      +d(inline-block)
+      +r()
+      +pl(40px)
+      &:before
+        content: ''
+        +a(6px, null, null, 0)
+        +size(30px, 29px)
+        +bgi('../img/difficulties-icon.png')
+    &_5
+      +d(none)
+      +min(sm)
+        +d(block)
+    &_5 &
+      &__inner
+        +pl(0)
+        +ta(center)
+        &:before
+          +d(none)
+      &__title
+        +ff('bl')
+        line-height: 1.1
+        +c($color-brand-1)
+        text-transform: uppercase
+        +min(sm)
+          +fs(25px)
+        +min(md)
+          +fs(34px)
+    &_3,
+    &_6,
+    &_9,
+    &_12
+      +min(sm)
+        +d(flex)
+        +jc(flex-end)
+    &_3 &__inner,
+    &_6 &__inner,
+    &_9 &__inner,
+    &_12 &__inner
+      +min(sm)
+        +pl(0)
+        +pr(40px)
+        +ta(right)
+        &:before
+          left: auto
+          right: 0
+    +min(md)
+      &_1 &__inner,
+      &_7 &__inner
+        +ml(30px)
+      &_3 &__inner,
+      &_9 &__inner
+        +mr(30px)

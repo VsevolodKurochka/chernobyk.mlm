@@ -1,0 +1,51 @@
+{% import 'macros/landing.twig' as landing %}
+{%
+    set items = [
+        {
+            title: 'Не умея или стесняясь<br>продавать, вы невольно<br><strong>пытаетесь “впарить”</strong> товар<br>под любым предлогом'
+        },
+        {
+            title: 'Приходится <strong>тащить процессы<br>на себе</strong>, контролируя каждого<br>члена команда и исправляя<br>за ним ошибки'
+        },
+        {
+            title: 'Вы не знаете, как <strong>заявить<br>о себе аудитории</strong>, привлечь<br>ее внимание и правильно донести<br>ценность вашего продукта'
+        },
+        {
+            title: 'Социальная ассоциация<br><strong>“млм - обман”</strong> заставляет<br> людей обходить вас седьмой<br> дорогой и быстро прерывать<br>диалог'
+        },
+        {
+            title: '<span class="color-brand-2">Сложности</span><br>сетевого бизнеса'
+        },
+        {
+            title: 'Попытки продать товар<br> друзьям, коллегам и семье<br> приводит к <strong>ухудшению<br> отношений</strong> и с первыми, и со<br> вторыми, и с третьими'
+        },
+        {
+            title: '<strong>Нет системы и стратегии</strong><br>продаж: людей привлекать<br>в команду сложно, а те, кто есть,<br> используют “агрессивные продажи”,<br> не думая на перспективу'
+        },
+        {
+            title: 'Сложно сохранять <strong>баланс работы<br>и личной жизни</strong>, потому что в любом<br> собеседнике начинаешь видеть<br> потенциального члена МЛМ-команды'
+        },
+        {
+            title: 'Из-за низких результатов<br> происходит сильная <strong>демотивация</strong> —<br> чувствуешь себя неудачником и<br> хочется бросить сетевой бизнес раз<br> и навсегда'
+        }
+    ]
+%}
+<section class="section difficulties">
+    {{ landing.image('img/cracked-floor.png', 'difficulties item', 'difficulties__bg') }}
+    <div class="container difficulties__container">
+        <div class="section__header difficulties__header">
+            <p class="section__title"><span class="color-brand-2">Сложности</span><br>сетевого бизнеса</p>
+        </div>
+        <div class="row">
+            {% set i = 0 %}
+            {% for item in items %}
+                {% set i = i + 1 %}
+                <div class="col-12 col-sm-4 difficulties-item difficulties-item_{{ i }}">
+                    <div class="difficulties-item__inner">
+                        <p class="difficulties-item__title">{{ item.title|raw }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
