@@ -6,10 +6,37 @@
     +my(90px)
 
   &__header
+    +r()
     +ta(center)
     +mb(45px)
     +min(md)
-      +mb(90px)
+      +mb(60px)
+
+    &-circle
+      +a(50%, null, null, 50%)
+      +size(150px)
+      transform: translate(-50%, -50%)
+      +bgc(#f7f9fb)
+      border-radius: 100%
+      z-index: -1
+      +min(sm)
+        +size(300px)
+      &:before
+        content: ''
+        +a(50%, null, null, 50%)
+        transform: translate(-50%, -50%)
+        +size(50%)
+        border-radius: 100%
+        border: 10px solid #fff
+        +min(md)
+          border-width: 20px
+      &_large
+        +min(sm)
+          +size(300px)
+        +min(md)
+          +size(500px)
+          &:before
+            border-width: 50px
 
   &__subtitle,
   &__title
@@ -18,7 +45,8 @@
     +tt(uppercase)
   &__title
     +fs(25px)
+    +lh(1.1)
     +min(md)
       +fs(30px)
     +min(lg)
-      +fs(45px)
+      +fs(40px)

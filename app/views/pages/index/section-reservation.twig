@@ -1,0 +1,15 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="section reservation">
+    <div class="container">
+        <div class="section__header reservation__header">
+            <div class="section__header-circle section__header-circle_large"></div>
+            <p class="section__title reservation__header-title">Бронируйте места — <br>и узнайте первыми об <span class="color-brand-2">инструментах<br> сетевого бизнеса XXI века</span></p>
+            {{
+                landing.button('btn_lg', 'Забронировать место', {
+                    'data-action': 'modal',
+                    'data-open': '#modal-form'
+                })
+            }}
+        </div>
+    </div>
+</section>
