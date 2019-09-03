@@ -1,0 +1,52 @@
+{% import 'macros/landing.twig' as landing %}
+{%
+    set items = [
+        {
+            image: 'img/wait-1.png',
+            list: [
+                'Как не сливать 70% времени впустую <br>и получать больше, работая меньше',
+                'Секреты привлечения, обучения, мотивации и удержания лидеров в команде',
+                'Авторская технология долгосрочных отношений с клиентами Тома Шрайтера',
+                'Технологии продвижения личного бренда, доступные каждому',
+                'Простые возможности онлайн-технологий для увеличения продаж',
+                'Способы поддержания личной продуктивности, когда бизнес “не идет” '
+            ]
+        },
+        {
+            image: 'img/wait-2.png',
+            list: [
+                'Уроки работы с социальными сетями и профессиональные продажи через соцсети',
+                'Как создать базу постоянных клиентов и дополнять ее',
+                'Основы лидерства: как грамотно вести людей за собой и заряжать их на успех',
+                'Понимание сути продаж и изучение лучших современных стратегий продаж ',
+                'Эффективный менеджмент: как работать не 20 часов в сутки, а головой',
+                'Лайфхаки по секретному привлечению клиентов от мировой легенды МЛМ'
+            ]
+        }
+    ]
+%}
+<section class="section wait" id="section-wait">
+    <div class="container">
+        <div class="section__header wait__header">
+            <p class="section__title">Что вас ждет</p>
+        </div>
+        <div class="wait__content">
+            {% for item in items %}
+                <div class="row wait-item">
+                    <div class="col-12 col-sm-6">
+                        <div class="wait-item__image-wrapper">
+                            {{ landing.image(item.image, 'suc item', 'wait-item__image') }}
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 content">
+                        <ul class="list list_check wait-item__list">
+                            {% for li in item.list %}
+                                <li>{{ li|raw }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

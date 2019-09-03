@@ -1,18 +1,21 @@
 .list
-	list-style: none
+  list-style: none
 
-	li
-		+r()
+  li
+    +r()
 
-		&:after
-			content: ""
-			+a()
+    &:after
+      content: ""
+      +a()
 
-	&_cancel
-		li
-			+pl(30px)
-
-			&:after
-				+t(0)
-				+l(0)
-				+size(37px)
+  &_check
+    li
+      +pl(30px)
+      +mb(10px)
+      +min(md)
+        +mb(15px)
+      &:after
+        +t(3px)
+        +l(0)
+        +size(22px, 14px)
+        +bgi('../img/icon-check.png')

@@ -1,0 +1,27 @@
+.wait
+  &-item
+    +max(sm)
+      &:not(:last-child)
+        +mb(30px)
+    +min(sm)
+      +ai(center)
+      &:nth-child(odd)
+        flex-direction: row-reverse
+
+    &__image
+      max-width: 200px
+      &-wrapper
+        +max(sm)
+          +mb(15px)
+          +ta(center)
+      +min(sm)
+        max-width: 80%
+
+    &__list
+      +min(sm)
+        +w(80%)
+      +min(md)
+        +w(70%)
+      li
+        &:nth-child(even)
+          +ff('b')
