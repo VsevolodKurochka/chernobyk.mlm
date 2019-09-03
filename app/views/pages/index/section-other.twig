@@ -1,0 +1,26 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="section other" id="section-other">
+    <div class="container">
+        <div class="row other__row">
+            <div class="col-12 col-sm-6">
+                {{ landing.image('img/other-image.png', 'other image', 'other__image') }}
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="other__content">
+                    <p>Почему у одних получается <strong>выйти на шести- и семизначные цифры дохода</strong>, а у других —
+                        это очередной жизненный опыт?</p>
+                    <p>Не мучайтесь сомнениями, а посетите событие,
+                        которое способствует стремительному росту структур
+                        и достижению целей, с помощью пошаговых инструкций и практических советов профессионалов.</p>
+                </div>
+                <p class="other__date date-place date-place_left">26 октября <span class="color-brand-1">Киев</span><br>КВЦ Парковый</p>
+                {{
+                    landing.button('btn_lg', 'Забронировать место', {
+                        'data-action': 'modal',
+                        'data-open': '#modal-form'
+                    })
+                }}
+            </div>
+        </div>
+    </div>
+</section>
