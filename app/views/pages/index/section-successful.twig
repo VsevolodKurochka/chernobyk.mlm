@@ -1,0 +1,60 @@
+{% import 'macros/landing.twig' as landing %}
+{%
+    set items = [
+        {
+            image: 'img/suc-1.png',
+            title: '9 часов',
+            content: 'ценного контента, который<br> вы не найдете<br> больше нигде'
+        },
+        {
+            image: 'img/suc-2.png',
+            title: '4 спикера',
+            content: 'которые обучат<br>вас лучшему из того,<br>что знают сами'
+        },
+        {
+            image: 'img/suc-3.png',
+            title: '30+ лет',
+            content: 'насчитывает опыт <br>в МЛМ-бизнесе легенды <br>основного спикера <br>Тома Шрайтера '
+        }
+    ]
+%}
+<section class="section successful" id="section-successful">
+    <div class="container">
+        <div class="row successful__row">
+            <div class="col-12 col-sm-6">
+                <div class="section__header successful__header">
+                    <p class="section__subtitle"><span class="color-brand-2">Успешный бизнес</span> —<br>
+                        это не элемент удачи и фарта.<br><br>
+
+                        Это система, где правильные<br>
+                        действия гарантируют результат</p>
+                </div>
+                <div class="content">
+                    <p>МЛМ 1.0: Мастерство, лидерство, менеджмент —
+                        это концентрированный бизнес-форум для тех, кто работает или планирует работать в сетевом бизнесе.</p>
+                    <p>Вы узнаете проверенные инструменты продаж
+                        и управления от лучших предпринимателей
+                        с командой в тысячи людей и миллионным доходом, научитесь грамотно обходить подводные камни
+                        и выстраивать отношения в МЛМ-бизнесе, освоите интернет-технологии продаж и сможете продавать
+                        через личный бренд.</p>
+                    <p>Вас ждет полный спектр знаний, обеспечивающий системную работу сетевого бизнеса и провоцирующих его рост.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                {% set i = 0 %}
+                {% for item in items %}
+                    {% set i = i + 1 %}
+                    <div class="successful-item successful-item_{{ i }}">
+                        <div class="successful-item__inner">
+                            {{ landing.image(item.image, 'suc item', 'successful-item__image') }}
+                            <div class="successful-item__content">
+                                <p class="successful-item__title">{{ item.title }}</p>
+                                <p class="successful-item__text">{{ item.content|raw }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
