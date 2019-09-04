@@ -1,0 +1,107 @@
+{% import 'macros/landing.twig' as landing %}
+{%
+set items = [
+    {
+        time: '9:30 - 10:00',
+        theme: {
+            title: 'Регистрация'
+        }
+    },
+    {
+        time: '10:00 - 10:30',
+        theme: {
+            title: 'Вступительное слово'
+        }
+    },
+    {
+        time: '10:30 - 11.30',
+        speaker: {
+            image: 'img/programm-speaker-oles.png',
+            name: 'Олесь Тимофеев',
+            content: 'Построение бизнеса в online. Как увеличить команду через<br> Личный Бренд в online.'
+        }
+    },
+    {
+        time: '11:30 - 12.30',
+        speaker: {
+            image: 'img/programm-speaker-borodina.png',
+            name: 'Лера Бородина',
+            content: 'Искусство начать и продолжить. О страхах в предпринимательстве<br> и о том, что мешает нам начать и продолжить'
+        }
+    },
+    {
+        time: '12:30 - 13:30',
+        theme: {
+            icon: 'img/programm-coffee.png',
+            title: 'Перерыв'
+        }
+    },
+    {
+        time: '13:30 - 14.30',
+        speaker: {
+            image: 'img/programm-speaker-shevela.png',
+            name: 'Наталия Шевела',
+            content: 'Как построить сильную команду лидеров'
+        }
+    },
+    {
+        time: '14:30 - 17.30',
+        speaker: {
+            main: true,
+            image: 'img/programm-speaker-tom.png',
+            name: 'Том Шрайтер',
+            content: 'Как достичь максимальных результатов в МЛМ бизнесе. Часть #1'
+        }
+    },
+]
+%}
+
+<section class="section program">
+    <div class="container">
+        <div class="section__header program__header">
+            <p class="section__title">Программа форума</p>
+        </div>
+        <div class="program__subheader">
+            <div class="col-3">
+                <p class="program__subheader-title">Тайминг</p>
+            </div>
+            <div class="col-9">
+                <p class="program__subheader-title">Спикер, тема</p>
+            </div>
+        </div>
+        <div class="program__content">
+            {% for item in items %}
+                {% if item.theme %}
+                    {% set type = 'theme' %}
+                {% elseif item.speaker %}
+                    {% set type = 'speaker' %}
+                {% endif %}
+                <div class="row program-item program-item_{{ type }} {{ item.speaker.main ? 'program-item_main' : '' }}">
+                    <div class="col-12 col-sm-3">
+                        <div class="program-item__block program-item__block_time">
+                            <p class="program-item__time">{{ item.time }}</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-9">
+                        <div class="program-item__block program-item__block_content">
+                            {% if item.theme %}
+                                {% if item.theme.icon %}
+                                    {{ landing.image(item.theme.icon, 'program item icon', 'program-item__theme-icon') }}
+                                {% endif %}
+                                <p class="program-item__theme">{{ item.theme.title }}</p>
+                            {% elseif item.speaker %}
+                                <div class="program-item__speaker">
+                                    {{ landing.image(item.speaker.image, 'programm speaker image', 'program-item__speaker-image') }}
+                                    <div class="program-item__speaker-body">
+                                        <p class="program-item__speaker-name">{{ item.speaker.name }}</p>
+                                        <p class="program-item__speaker-content">{{ item.speaker.content|raw }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

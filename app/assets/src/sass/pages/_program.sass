@@ -1,0 +1,79 @@
+.program
+  &__subheader
+    +d(none)
+    +ta(center)
+    +c(#d8d8d8)
+    +ff('b')
+    +mb(30px)
+    +min(sm)
+      +row()
+      +mx( -(getComp(gutter)) )
+  &-item
+    +mb(30px)
+    +min(sm)
+      +mb(10px)
+    &__block
+      border-radius: 8px
+      &_content
+        +max(sm)
+          +d(flex)
+          +ai(center)
+          +jc(center)
+      +min(sm)
+        border: 2px solid #b0c3d4
+        +h(60px)
+        +d(flex)
+        +ai(center)
+        +h(100px)
+    &__time
+      +flexColumnWidth(100%)
+      +ta(center)
+      +ff('bl')
+      +max(sm)
+        +fs(20px)
+
+    &__theme
+      +ff('bl')
+      +max(sm)
+        +ta(center)
+      &-icon
+        +max(sm)
+          +mr(15px)
+          +w(30px)
+        +min(sm)
+          +ml(30px)
+      +min(sm)
+        +pl(30px)
+
+    &_speaker,
+    &_main
+      +min(sm)
+        +c($color-white)
+
+    &_speaker &__block
+      &_content
+        +min(sm)
+          background-color: #01649f
+
+    &_main &__block
+      +min(sm)
+        +bgc($color-brand-2)
+
+    &_speaker &__block,
+    &_main &__block
+      &_content
+        +min(sm)
+          box-shadow: 0 19px 32px 0 rgba(0, 0, 0, 0.23)
+
+    &__speaker
+      +d(flex)
+      +ai(center)
+      +pl(15px)
+      &-image
+        +mr(15px)
+      &-name
+        +ff('bl')
+      &-content
+        +fs(14px)
+        +min(md)
+          +fs(16px)
