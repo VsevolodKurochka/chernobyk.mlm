@@ -1,7 +1,9 @@
 .content
-  p
-    &:not(:last-child)
+  p, ul
+    &:not(:last-child):not(.content-offset)
       +mb(15px)
+  &-offset
+    +my(30px)
   +min(sm)
     +fs(14px)
   +min(md)

@@ -1,0 +1,66 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="section day">
+    <div class="container">
+        <div class="day__content">
+            <div class="row day-item">
+                <div class="col-12 col-sm-6 day-item__image-wrapper">
+                    {{ landing.image('img/day-1.png', 'day image 1', 'day-item__image') }}
+                </div>
+                <div class="col-12 col-sm-6 content">
+                    <p class="day-item__title">
+                        <span class="day-item__title-highlight color-brand-2">VIP-день</span><br>
+                        с Большим Элом<br>
+                        для команды <span class="color-brand-2">Grono</span>!
+                    </p>
+                    <p>Вы — участник команды Grono?<br>Тогда ловите специальный <strong class="color-brand-2">сюрприз</strong>.</p>
+                    <p>Вас ждет бонус в виде дополнительного учебного дня <strong class="color-brand-3">27 октября</strong>,
+                        проведенного вместе с <strong>Большим Элом (Томом Шрайтером)</strong>.
+                        Единственный спикер, эксклюзивный тренинг, безграничная порция  ценного контента и вы!</p>
+                    <p>Задавайте вопросы, о которых молчали,  выполняйте задания Большого Эла — и наблюдайте,  как ваши знания в МЛМ умножаются за 1 день!</p>
+                    <p>VIP-день пройдет по адресу: <strong>Киев, ул. Вадима Гетьмана, 6, зал Спилберг.</strong></p>
+                    <p>Все подробности узнавайте у своих лидеров!</p>
+                </div>
+            </div>
+            <div class="row day-item">
+                <div class="col-12 col-sm-6 day-item__image-wrapper">
+                    {{ landing.image('img/day-2.png', 'day image 2', 'day-item__image') }}
+                </div>
+                <div class="col-12 col-sm-6 content">
+                    <p class="color-brand-3"><strong>В программе:</strong></p>
+                    <ul class="list list_check">
+                        <li>Закрытые лекции с эксклюзивным контентом</li>
+                        <li>Задания от спикера по ходу обучения</li>
+                        <li>Фотосессия</li>
+                        <li>Возможность задать вопросы спикеру</li>
+                        <li>Пошаговое создание индивидуальной стратегии рекрутинга для вашей команды в ходе выполнения заданий от Тома Шрайтера</li>
+                    </ul>
+                    <strong class="color-brand-3">Успейте <span class="color-brand-2">забронировать место</span> за закрытую встречу — билетов всего 700!</strong>
+                </div>
+            </div>
+            <div class="row day-item">
+                <div class="col-12 col-sm-6 day-item__image-wrapper">
+                    {{ landing.image('img/day-3.png', 'day image 3', 'day-item__image') }}
+                </div>
+                <div class="col-12 col-sm-6 content">
+                    <p><strong class="color-brand-2">* Внимание!</strong> Лидер Grono <strong>Наталия Шевела</strong> решила
+                        сделать сюрприз команде и самостоятельно оплатила часть стоимости каждого билета.</p>
+                    <p>Теперь цена участия второго дня для вас составляет всего лишь:</p>
+                    <p>Чтобы посетить мероприятие, возьмите <strong>промокод</strong>
+                        у своего лидера и введите его в специальное поле
+                        при покупке билета на первый день форума
+                        <strong>“МЛМ 1.0: Мастерство, лидерство, менеджмент”</strong></p>
+                    <p class="content-offset">
+                        {{
+                            landing.button('btn_lg', 'Забронировать место', {
+                                'data-action': 'modal',
+                                'data-open': '#modal-form'
+                            })
+                        }}
+                    </p>
+                    <p><strong class="color-brand-2">* Внимание!</strong>
+                        Попасть на второй день обучения могут только участники Grono, посетившие первый день конференции.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

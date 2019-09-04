@@ -1,0 +1,31 @@
+.day
+  +min(md)
+    +mt(-90px)
+  &-item
+    +max(md)
+      +mb(45px)
+    +min(sm)
+      +ai(center)
+      &:nth-child(odd)
+        flex-direction: row-reverse
+      &:nth-child(odd) &__image-wrapper
+        +ta(right)
+
+    &__title
+      +ff('bl')
+      +lh(1.1)
+      +tt(uppercase)
+      +c($color-brand-3)
+      +fs(22px)
+      +min(sm)
+        +fs(25px)
+      +min(md)
+        +fs(30px)
+
+      &-highlight
+        +fs(200%)
+
+    &__image
+      +w(220px)
+      +min(sm)
+        +w(80%)
