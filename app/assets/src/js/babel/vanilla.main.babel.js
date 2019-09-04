@@ -227,5 +227,15 @@
 			document.body.style.cursor = 'pointer';
 		}
 
+		document.querySelectorAll('.review-item__toggle').forEach((toggle) => {
+			toggle.addEventListener('click', function() {
+				const content = this.parentElement.parentElement.querySelector('.review-item__content');
+				const textOpen = this.getAttribute('data-open');
+				const textClose = this.getAttribute('data-close');
+				toggleClass(content, 'review-item__content_trim');
+				this.innerHTML = (this.innerHTML === textOpen ? textClose: textOpen);
+			});
+		});
+
 	});
 }());

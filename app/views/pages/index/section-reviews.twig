@@ -86,9 +86,12 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="review-item__content">
+                        <div class="review-item__content review-item__content_trim">
                             {{ item.content|raw }}
                         </div>
+                        <p class="review-item__footer">
+                            <span class="review-item__toggle" data-open="Читать далее" data-close="Скрыть">Читать далее</span>
+                        </p>
                     </div>
                 </div>
             {% endfor %}

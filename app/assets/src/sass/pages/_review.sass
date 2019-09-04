@@ -35,6 +35,24 @@
         +size(80px)
     &__content
       +fs(14px)
+      &_trim
+        +max(sm)
+          overflow: hidden
+          display: -webkit-box
+          -webkit-line-clamp: 3
+          -webkit-box-orient: vertical
+          +h(58px)
       +min(sm)
         +max(md)
           +fs(12px)
+
+    &__footer
+      +mt(15px)
+      +min(sm)
+        +d(none)
+
+    &__toggle
+      +c($color-brand-2)
+      +ff('bl')
+      +tt(uppercase)
+      cursor: pointer
