@@ -42,9 +42,7 @@
     &__price
       +ff('b')
       +mb(30px)
-      +fs(22px)
-      +min(md)
-        +fs(28px)
+      +fs(30px)
       +min(lg)
         +fs(34px)
       sup
@@ -56,15 +54,17 @@
 
     &_standart &__inner
       +r()
-      +bgc($color-white)
+      +bgc(#b0c3d4)
+
       &:before
         content: ''
         +a(0, null, null, 0)
         +size(100%)
-        +bgc(#b0c3d4)
-        transform: scale(1.05)
+        +bgc($color-white)
+        transform: scale(0.98)
         z-index: -1
         border-radius: 8px
+        clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%)
       &__title
         border-bottom-color: #b0c3d4
     &_gold

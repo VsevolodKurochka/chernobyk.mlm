@@ -208,7 +208,7 @@
 
 			new SmoothScroll(this.links, {
 				offset: 80,
-				after: () => {
+				before: () => {
 					removeClass(this.hamburger, 'active');
 					removeClass(this.menu, `nav__menu_active`);
 				}

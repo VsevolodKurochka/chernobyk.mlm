@@ -31,6 +31,10 @@
     +jc(center)
     +min(sm)
       +jc(flex-end)
+      +mt(-160px)
+
+    +min(md)
+      +mt(-205px)
 
     +min(lg)
       +mt(-240px)
@@ -45,19 +49,33 @@
         padding: 10px 20px
         +fs(12px)
       +min(sm)
-        +a(20%, null, null, -56%)
+        +a(20%, null, null, -60%)
+        padding: 15px 25px
+        font-size: 14px
+      +min(md)
+        font-size: 18px
+        +l(-56%)
+      +min(lg)
+        padding: 25px 45px
+        font-size: 20px
     &-man
-      max-width: 100px
+      +w(100px)
       +max(sm)
         +mr(15px)
+      +min(sm)
+        +w(125px)
       +min(md)
-        max-width: 230px
+        +w(195px)
+      +min(lg)
+        +w(230px)
     &-description
       +max(sm)
         +fs(12px)
         +mb(10px)
         br
           +d(none)
+      +max(md)
+        +fs(14px)
     &-content
       +max(sm)
         flex-basis: 55%

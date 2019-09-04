@@ -26,11 +26,11 @@
                 Мирового масштаба, а также от <span class="color-brand-2">Лидеров мнений</span> — <br>
                 лучших предпринимателей из различных отраслей</p>
         </div>
-        <div class="row">
+        <div class="row practice__row">
             {% set i = 0 %}
             {% for item in items %}
                 {% set i = i + 1 %}
-                <div class="col-12 col-sm-4 practice-item__column">
+                <div class="col-12 col-xs-6 col-sm-4 practice-item__column">
                     <div class="practice-item practice-item_{{ i }} practice-item_{{ item.type }}">
                         <div class="practice-item__inner">
                             {{ landing.image(item.icon, 'practice item', 'practice-item__image') }}

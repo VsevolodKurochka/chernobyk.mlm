@@ -1,4 +1,7 @@
 .practice
+  &__row
+    +min(xs)
+      +jc(center)
   &-item
     +r()
     +d(flex)
@@ -9,6 +12,9 @@
     +py(45px)
     border-radius: 5px
     box-shadow: 0 7px 25px 0px $color-brand-1
+    +max(xs)
+      +w(250px)
+      +mx(auto)
     +min(sm)
       +py(60px)
     +min(md)
