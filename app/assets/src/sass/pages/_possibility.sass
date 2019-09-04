@@ -1,4 +1,6 @@
 .possibility
+  &__container
+    +r()
   &__content
     +d(flex)
     +jc(center)
@@ -6,12 +8,15 @@
     +bgi('../img/possibility-image.png')
     padding: 120px 15px
     +max(sm)
+      +mx(-15px)
       background-position: center
     +min(sm)
       +py(80px, 75px)
     +min(md)
       +py(125px, 140px)
     &-inner
+      +r()
+      z-index: 1
       +c($color-white)
       +min(sm)
         +w(60%)
@@ -25,3 +30,23 @@
       p
         &:not(:last-child)
           +mb(15px)
+  &__skew
+    +min(sm)
+      +w(250px)
+    &_1
+      +t(20%)
+      +l(-20%)
+      opacity: 0.6
+    &_2
+      +t(-10%)
+      +l(80%)
+      +w(200px)
+    &_3
+      +l(-2%)
+      +t(45%)
+    &_4
+      +b(15%)
+      right: 0
+    &_5
+      +b(2%)
+      left: 40%

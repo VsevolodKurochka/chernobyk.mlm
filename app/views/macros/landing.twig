@@ -18,3 +18,8 @@
     {% endif %}
   </div>
 {% endmacro %}
+
+{% macro skew(type, customClass) %}
+    {% import _self as landingMacros %}
+    {{ landingMacros.image("img/skew-#{type}.png", 'skew', "skew #{customClass}") }}
+{% endmacro %}

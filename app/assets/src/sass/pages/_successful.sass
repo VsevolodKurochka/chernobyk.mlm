@@ -16,14 +16,19 @@
       +r()
       +d(flex)
       +ai(center)
+      +max(sm)
+        +jc(center)
       &:before
         content: ''
         +a(50%, null, null, 0)
-        +size(100%, 75px)
+        +size(200px, 75px)
         +bgc(#e2eaf0)
         z-index: -1
         clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%)
         transform: rotate(-15deg) translateY(-50%)
+        +max(sm)
+          left: 50%
+          margin-left: -75px
         +min(md)
           +size(450px, 100px)
       +min(sm)

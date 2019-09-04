@@ -1,5 +1,9 @@
 {% import 'macros/landing.twig' as landing %}
 <section class="section greeting">
+    {{ landing.skew('1', 'greeting__skew_1') }}
+    {{ landing.skew('2', 'greeting__skew_2') }}
+    {{ landing.skew('3', 'greeting__skew_3') }}
+    {{ landing.skew('2', 'greeting__skew_4') }}
     <div class="container greeting__container">
         {{ landing.image('img/greeting-man.png', 'greeting man', 'greeting__man') }}
         <div class="greeting__titles">
