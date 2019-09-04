@@ -1,0 +1,39 @@
+.registration
+  +bgi('../img/registration.jpg')
+  +my(0)
+  +mb(0)
+  +py(60px)
+  +min(sm)
+    +pt(150px)
+  +min(md)
+    +py(230px, 80px)
+
+  &__title
+    +c($color-white)
+    +tt(uppercase)
+    +lh(1.1)
+    +fs(25px)
+    +ff('bl')
+    +min(md)
+      +fs(32px)
+    +min(lg)
+      +fs(38px)
+  &__form
+    +bgc($color-white)
+    border-radius: 8px
+    +ta(center)
+    padding: 30px
+    +min(md)
+      +py(60px, 80px)
+
+    &-title
+      +tt(uppercase)
+      +c($color-brand-3)
+      +mb(15px)
+      +fs(20px)
+      +ff('bl')
+      +min(sm)
+        +mb(30px)
+        +fs(24px)
+      +min(md)
+        +fs(30px)
