@@ -1,0 +1,40 @@
+.review
+  &-item
+    +mb(30px)
+    +min(sm)
+      &_4,
+      &_8
+        +mt(-60px)
+      &_10
+        +mt(-180px)
+    &__inner
+      border-radius: 8px
+      background-color: $color-white
+      box-shadow: 0 19px 32px 0 rgba(0, 0, 0, 0.23)
+      padding: 15px
+    &__header
+      +d(flex)
+      +ai(center)
+      +jc(space-between)
+      +mb(10px)
+      &-part
+        +d(flex)
+        +ai(center)
+    &__name
+      +ff('bl')
+      +c(#01649f)
+      +min(sm)
+        +fs(16px)
+      +min(lg)
+        +fs(22px)
+    &__image
+      +size(50px)
+      +mr(15px)
+      border-radius: 100%
+      +min(md)
+        +size(80px)
+    &__content
+      +fs(14px)
+      +min(sm)
+        +max(md)
+          +fs(12px)

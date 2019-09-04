@@ -1,0 +1,15 @@
+.social
+  +fs(0)
+  &__item
+    +d(inline-block)
+    &:not(:last-child)
+      +mr(15px)
+  &__link
+    +d(inline-block)
+    +size(40px)
+    border-radius: 100%
+    +tr()
+    &:hover
+      opacity: 0.8
+    &_fb
+      +bgi('../img/facebook-icon.png')
