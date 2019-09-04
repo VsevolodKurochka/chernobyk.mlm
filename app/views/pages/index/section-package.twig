@@ -1,0 +1,54 @@
+{% import 'macros/landing.twig' as landing %}
+{%
+set items = [
+    {
+        type: 'standart',
+        title: 'Standart',
+        content: '6-22 ряд<br>(3-й балкон)',
+        price: '1190'
+    },
+    {
+        type: 'gold',
+        title: 'Gold',
+        content: '2-5 ряд<br>(2-й балкон)',
+        price: '2500'
+    },
+    {
+        type: 'premium',
+        title: 'Premium',
+        content: '1 ряд<br>(1-й балкон)',
+        price: '3000'
+    },
+    {
+        type: 'premium-plus',
+        title: 'Premium+',
+        content: '12 мест в центре в<br> первом ряду <br>+ ужин',
+        price: '10 000'
+    }
+]
+%}
+
+<section class="section package">
+    <div class="container">
+        <div class="section__header package__header">
+            <p class="section__title">Пакеты участия</p>
+        </div>
+        <div class="row package__content">
+            {% for item in items %}
+                <div class="col-12 col-xs-6 col-md-3 package-item package-item_{{ item.type }}">
+                    <div class="package-item__inner">
+                        <p class="package-item__title">{{ item.title }}</p>
+                        <p class="package-item__content">{{ item.content|raw }}</p>
+                        <p class="package-item__price">{{ item.price }}<sup>грн</sup></p>
+                        {{
+                            landing.button('package-item__button', 'Узнать наличие мест', {
+                                'data-action': 'modal',
+                                'data-open': '#modal-form'
+                            })
+                        }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
