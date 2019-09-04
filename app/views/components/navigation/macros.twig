@@ -21,15 +21,15 @@
 
 {% macro menu(class) %}
   <nav class="nav__menu {{class}}" id="js-navigation-menu">
-    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-1">Спикеры</a></li>
-    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-2">Программа</a></li>
-    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-3">Отзывы</a></li>
-    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-3">Пакеты участия</a></li>
+    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#section-speakers">Спикеры</a></li>
+    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#section-program">Программа</a></li>
+    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#section-reviews">Отзывы</a></li>
+    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#section-packages">Пакеты участия</a></li>
   </nav>
 {% endmacro %}
 
 {% macro addition(type,  class) %}
   <div class="nav__addition {{class}}">
-    <button class="btn nav__addition-button">Узнать наличие мест</button>
+    <button class="btn nav__addition-button" data-action="modal" data-open="#modal-form">Узнать наличие мест</button>
   </div>
 {% endmacro %}
