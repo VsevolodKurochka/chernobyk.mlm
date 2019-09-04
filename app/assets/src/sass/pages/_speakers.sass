@@ -1,0 +1,94 @@
+.speakers
+  +min(md)
+    +mt(190px)
+
+  &__header
+    +min(md)
+      +mb(120px)
+  &-item
+    +max(sm)
+      +mb(-45px)
+    +min(sm)
+      &:nth-child(odd)
+        flex-direction: row-reverse
+
+    &__circle
+      +r()
+      border-radius: 100%
+      +bgc(#e4ecf2)
+      overflow: hidden
+      z-index: -1
+      +size(250px)
+      +max(sm)
+        +mx(auto)
+      &:before
+        content: ''
+        +a(50%, null, null, 50%)
+        transform: translate(-50%, -50%)
+        +size(50%)
+        +bgc(#ff9d00)
+        border-radius: 100%
+        border: 10px solid $color-white
+        +min(sm)
+          border-width: 20px
+        +min(md)
+          border-width: 45px
+      +min(sm)
+        +a(50%, 0)
+        transform: translateY(-50%)
+        +size(400px)
+      +min(md)
+        +size(500px)
+      +min(lg)
+        +size(700px)
+      &-image
+        +a(null, null, -2%, 50%)
+        transform: translateX(-50%)
+        +h(200px)
+        +min(sm)
+          +h(350px)
+        +min(md)
+          +h(450px)
+        +min(lg)
+          +h(550px)
+      &-wrapper
+        +r()
+    &__title
+      +ff('bl')
+      +c($color-brand-1)
+      +mb(15px)
+      +tt(uppercase)
+      +fs(23px)
+      +max(sm)
+        +ta(center)
+      +min(md)
+        +mb(30px)
+        +fs(28px)
+
+    &__list
+      li
+        &:nth-child(even)
+          +ff('b')
+      +min(sm)
+        +w(80%)
+
+    +min(sm)
+      +mb(140px)
+      &_1
+        +mb(45px)
+
+    +min(md)
+      &_2 &
+        &__content
+          +r(45px, null, null, -90px)
+      &_4 &
+        &__circle
+          &-image
+            +l(35%)
+        &__content
+          +r(null, null, null, -90px)
+
+    +min(lg)
+      +mb(300px)
+      &_1
+        +mb(160px)

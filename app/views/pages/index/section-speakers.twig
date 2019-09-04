@@ -1,0 +1,80 @@
+{% import 'macros/landing.twig' as landing %}
+{%
+    set items = [
+        {
+            image: 'img/speaker-tom.png',
+            title: 'ТОМ ШРАЙТЕР',
+            list: [
+                'Живая легенда сетевого бизнеса',
+                'Опыт работы в МЛМ - свыше 30 лет',
+                'Основатель и издатель учебного информационного журнала “Fortune Now”',
+                'Автор бестселлеров “Большой Эл раскрывает
+                свои секреты”, “Секретный язык привлечения”,
+                “Как разбудить ваш спящий бизнес” и др.',
+                'Автор программ обучения для людей,
+                работающих в сетевом бизнесе',
+                'Проводит семинары по рекрутингу в США, Канаде, Великобритании, Германии, и других странах'
+            ]
+        },
+        {
+            image: 'img/speaker-borodina.png',
+            title: 'ЛЕРА БОРОДИНА',
+            list: [
+                'Бизневсумен',
+                'Основательница сервиса аренды платьевOh My Look!',
+                'Основатель Lavla и BigPlans Club',
+                'Соосновательница бьюти-пространства G.Bar и бренда SoDoDo',
+                'В прошлом — маркетинговый директор Comedy Club Ukraine',
+            ]
+        },
+        {
+            image: 'img/speaker-temofeev.png',
+            title: 'ОЛЕСЬ ТИМОФЕЕВ',
+            list: [
+                'Интернет-предприниматель',
+                'Основатель образовательной компаниии самого крупного в СНГ сообщества интернет-предпринимателей Genius Marketing',
+                'Организатор одного из самых масштабных в  Восточной Европе ежегодного события по интернет-маркетингу – Лаборатория Онлайн Бизнеса (ЛОБ)',
+            ]
+        },
+        {
+            image: 'img/speaker-woman.png',
+            title: 'НАТАЛИЯ ШЕВЕЛА',
+            list: [
+                'Успешный управленец',
+                '<span class="color-brand-1">Вдохновитель и создатель команды Grono, насчитывающей <span class="color-brand-2">8000+</span> человек из <span class="color-brand-2">137</span> стран мира</span>',
+                'Член Совета Директоров компании InCruises',
+            ]
+        }
+    ]
+%}
+
+<section class="section speakers">
+    <div class="container">
+        <div class="section__header speakers__header">
+            <p class="section__title">Спикеры мероприятия</p>
+        </div>
+        <div class="speakers__content">
+            {% set i = 0 %}
+            {% for item in items %}
+                {% set i = i + 1 %}
+                <div class="row speakers-item speakers-item_{{ i }}">
+                    <div class="col-12 col-sm-6 speakers-item__circle-wrapper">
+                        <div class="speakers-item__circle">
+                            {{ landing.image(item.image, 'speaker item', 'speakers-item__circle-image') }}
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 speakers-item__content">
+                        <p class="speakers-item__title">{{ item.title }}</p>
+                        <div class="content">
+                            <ul class="list list_check speakers-item__list">
+                                {% for li in item.list %}
+                                    <li>{{ li|raw }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div
+    </div>
+</section>
