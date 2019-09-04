@@ -102,3 +102,20 @@
       &__inner
         +bgc($color-brand-3)
         +c($color-white)
+
+  &__skew
+    &_1
+      +t(0)
+      +l(-20%)
+      opacity: 0.5
+    &_2
+      +t(5%)
+      +l(50%)
+      opacity: 0.8
+      +min(sm)
+        +w(400px)
+    &_3
+      +t(80%)
+      right: 0
+      +min(sm)
+        +w(300px)

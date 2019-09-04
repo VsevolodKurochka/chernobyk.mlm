@@ -25,3 +25,20 @@
       li
         &:nth-child(even)
           +ff('b')
+  &__skew
+    &_1
+      +t(0)
+      +l(-10%)
+      opacity: 0.4
+    &_2
+      +t(5%)
+      right: 2%
+    &_3
+      +t(45%)
+      +l(30%)
+    &_4
+      +b(0)
+      right: 0
+      opacity: 0.5
+      +min(sm)
+        +w(350px)
