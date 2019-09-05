@@ -1,0 +1,28 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="thanks">
+    {{ landing.skew('1', 'thanks__skew thanks__skew_1') }}
+    {{ landing.skew('2', 'thanks__skew thanks__skew_2') }}
+    {{ landing.skew('3', 'thanks__skew thanks__skew_3') }}
+    {{ landing.skew('4', 'thanks__skew thanks__skew_4') }}
+    <div class="container thanks__container">
+        <div class="row thanks__row">
+            <div class="col-12 col-sm-6">
+                <div class="thanks__image-wrapper">
+                    {{ landing.image('img/thanks-image.png', 'thanks image', 'thanks__image') }}
+                    <p class="thanks__image-title">Ваша оплата <br>прошла <span class="color-brand-2">успешно</span>, <br>поздравляем!</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 thanks__content">
+                <p>На почте вы найдете электронный билет, который нужно будет распечатать ко дню мероприятия. Он станет вашим пропуском на встречу с Большим Элом и другими известными спикерами.</p>
+                <p>Напоминаем, что в первый день мы встречаемся:</p>
+                <p>Длительность мероприятия — с 10:00 до 17:00.</p>
+                <p class="date-place date-place_left thanks__content-date">26 октября Киев<br>КВЦ Парковый</p>
+                <p>Дресс-код — улыбка и желание учиться. Приходите заранее, чтобы занять лучшие места!</p>
+                <p>P.S. А как же второй, бонусный день для участника команды Grono?</p>
+                <p>Вы в списке! Ждем вас 27 октября в Конгресс-Холле Космополит (ул. Вадима Гетьмана 6, зал Спилберг).</p>
+                <p>Длительность второго дня — с 10:00 до 17:00</p>
+                <p>До встречи!</p>
+            </div>
+        </div>
+    </div>
+</section>

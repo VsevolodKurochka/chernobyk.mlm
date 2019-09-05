@@ -1,0 +1,71 @@
+.thanks
+  +r()
+  +bgi('../img/thanks-bg.jpg')
+  +c($color-white)
+  +py(45px)
+  +min(sm)
+    +h(100vh)
+    +d(flex)
+    +ai(center)
+    +jc(center)
+    overflow: hidden
+  &:before
+    content: ''
+    +a(0, 0)
+    +size(100%)
+    +bgc(transparentize($color-brand-3, 0.2))
+
+  &__container
+    +r()
+    z-index: 1
+
+  &__image
+    &-wrapper
+      +r()
+      +max(sm)
+        +mb(30px)
+    &-title
+      +a(null, null, 0, 0)
+      +ff('bl')
+      +fs(22px)
+      +lh(1.1)
+      +tt(uppercase)
+      +min(sm)
+        +fs(26px)
+      +min(md)
+        +fs(40px)
+  &__content
+    p
+      &:not(:last-child)
+        +mb(10px)
+    +fs(14px)
+    &-date
+      +c($color-white)
+
+  &__row
+    +min(sm)
+      +ai(center)
+
+  &__skew
+    &_1
+      +t(0)
+      +l(65%)
+      opacity: 0.6
+      +min(sm)
+        +t(-15%)
+        +w(280px)
+    &_2
+      +t(5%)
+      +l(-5%)
+      +w(200px)
+    &_3
+      +l(15%)
+      +b(0)
+      +min(sm)
+        +b(-20%)
+    &_4
+      +b(15%)
+      right: 0
+      opacity: 0.8
+      +min(sm)
+        +w(300px)

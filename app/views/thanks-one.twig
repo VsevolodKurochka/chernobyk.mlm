@@ -1,0 +1,23 @@
+{% import 'macros/base.twig' as macros %}
+{% extends 'layouts/mainLayout.twig' %}
+
+{% set title = 'Ваша оплата прошла успешно, поздравляем!' %}
+{% set description = 'На почте вы найдете электронный билет, который нужно будет распечатать ко дню мероприятия. Он станет вашим пропуском на встречу с Большим Элом и другими известными спикерами.' %}
+{% set image = 'img/logo.png' %}
+{% set url = 'url' %}
+{% set favicon = 'img/logo.png' %}
+
+{% block meta %}
+{{ macros.meta(title, description, image, url, favicon) }}
+{% endblock %}
+
+{% block css %}
+{{ macros.css("css/style.min.css") }}
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+{% include 'pages/thanks/one.twig' %}
+{% endblock %}
