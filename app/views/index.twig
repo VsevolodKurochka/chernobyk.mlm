@@ -1,13 +1,14 @@
 {% import 'macros/base.twig' as macros %}
 {% extends 'layouts/mainLayout.twig' %}
 
-{% set title = 'Title' %}
-{% set description = 'description' %}
+{% set title = 'MLM 1.0' %}
+{% set description = 'Бизнес-событие, объединяющее инсайдеров и лидеров МЛМ индустрии. Проверенные стратегии продаж, управления командами и привлечения клиентов от лидеров отрасли' %}
 {% set image = 'img/logo.png' %}
 {% set url = 'url' %}
+{% set favicon = 'img/logo.png' %}
 
 {% block meta %}
-{{ macros.meta(title, description, image, url) }}
+{{ macros.meta(title, description, image, url, favicon) }}
 {% endblock %}
 
 {% block css %}

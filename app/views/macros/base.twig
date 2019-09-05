@@ -6,8 +6,9 @@
   <link rel="stylesheet" href="{{path}}/{{href}}">
 {% endmacro %}
 
-{% macro meta(title, description, image, url) %}
+{% macro meta(title, description, image, url, favicon) %}
   <title>{{title}}</title>
+  <link rel="shortcut icon" href="{{path}}/{{favicon}}" type="image/png">
   <meta property="og:title" content="{{title}}"/>
   <meta itemprop="description" content="{{description}}"/>
   <meta property="og:description" content="{{description}}"/>
