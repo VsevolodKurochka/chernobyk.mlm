@@ -1,4 +1,21 @@
+@keyframes skewTranslate
+  50%
+    transform: translateY(-40px)
+  0%, 100%
+    transform: none
+
 .skew
   +a()
   +max(sm)
     max-width: 40%
+  animation: skewTranslate 4s ease 0s infinite
+  +tr()
+  &_delay
+    &_1
+      animation-delay: 1s
+    &_2
+      animation-delay: 2s
+    &_3
+      animation-delay: 3s
+    &_4
+      animation-delay: 4s
