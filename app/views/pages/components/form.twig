@@ -1,0 +1,28 @@
+{% import "macros/form.twig" as form %}
+{%
+    set inputs = [
+        {
+            'name': 'email',
+            'value': '',
+            'type': 'email',
+            'attributes': {
+                'placeholder': 'Email',
+                'class': 'form__control'
+            }
+        }
+    ]
+%}
+<form action="http://style.grono.top/page/shriter" class="form form_block" method="POST">
+    <input type="hidden" name="action" value="submit">
+    <input type="hidden" name="id" value="613">
+    <div class="form__content">
+        {% for input in inputs %}
+            <div class="form__row">
+                {{ form.input(input.name, input.value, input.type, input.attributes) }}
+            </div>
+        {% endfor %}
+        <div class="form__row">
+            {{ form.button('submit', 'form__submit btn btn_brand-1 btn_hover', 'Забронировать место') }}
+        </div>
+    </div>
+</form>
