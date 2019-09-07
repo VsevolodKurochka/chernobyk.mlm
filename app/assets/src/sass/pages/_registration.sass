@@ -28,17 +28,22 @@
     +bgc($color-white)
     border-radius: 8px
     +ta(center)
-    padding: 30px
+    padding: 15px 15px 30px 15px
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%)
+    +min(xs)
+      padding: 30px
     +min(md)
       +py(60px, 80px)
 
     &-title
       +tt(uppercase)
       +c($color-brand-3)
-      +mb(15px)
-      +fs(20px)
+      +mb(10px)
+      +fs(15px)
       +ff('bl')
+      +min(xs)
+        +fs(20px)
+        +mb(15px)
       +min(sm)
         +mb(30px)
         +fs(24px)
@@ -63,3 +68,35 @@
       opacity: 0.5
       +min(sm)
         +w(300px)
+
+  &__footer
+    +mt(15px)
+    +ta(center)
+    +ai(center)
+    +row()
+    +jc(space-between)
+    +min(sm)
+      +mt(45px)
+    +min(md)
+      +mt(60px)
+
+    &-button
+      +ff('b')
+      cursor: pointer
+      opacity: 0.5
+      +tr()
+      +c($color-white)
+      +fs(10px)
+      +min(sm)
+        +fs(14px)
+      +min(md)
+        +fs(16px)
+      &:hover
+        opacity: 0.9
+
+    &-logo
+      opacity: 0.3
+      +min(sm)
+        +mx(15px)
+      +max(sm)
+        +w(75px)
